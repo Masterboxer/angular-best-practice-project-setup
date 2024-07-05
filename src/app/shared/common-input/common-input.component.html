@@ -1,0 +1,42 @@
+<div class="relative">
+  <input
+    #commonInput
+    class="border ml-4 mr-4 h-12 rounded pl-4 mb-1"
+    [ngClass]="{ 'border-common-red-color': !inputValue.value }"
+    [readonly]="readOnly"
+    [type]="type"
+    [formControl]="inputValue"
+    id="{{ inputId ? inputId : placeholder }}"
+    (blur)="onTouched($event)"
+    [maxlength]="minLength ? minLength : ''"
+    [maxlength]="maxLength ? maxLength : ''"
+    (input)="onInput(commonInput)"
+    (focus)="onFocus(commonInput)"
+    (focusout)="onFocusOut(commonInput)"
+    placeholder=" "
+    autocomplete="on"
+  />
+  <div class="absolute top-3 right-6">
+    @if (type === "password" || (type === "text" && isEyeOpen)) {
+      <mat-icon
+        class="cursor-pointer"
+        aria-hidden="false"
+        aria-label="Eye Icon"
+        [fontIcon]="isEyeOpen ? 'visibility' : 'visibility_off'"
+        (click)="triggerPasswordVisibility()"
+      ></mat-icon>
+    }
+  </div>
+</div>
+@if (control?.control?.touched && control?.control?.errors?.errorMessage) {
+  <div class="flex text-common-warning-color gap-1 justify-center">
+    <mat-icon
+      aria-hidden="false"
+      aria-label="Cross Icon"
+      fontIcon="cancel"
+    ></mat-icon>
+    <p>
+      {{ control?.control?.errors?.errorMessage }}
+    </p>
+  </div>
+}

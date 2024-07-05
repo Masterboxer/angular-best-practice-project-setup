@@ -1,0 +1,20 @@
+$primary-background-color: #ffffff;
+$primary-text-color: #000000;
+$primary-border-color: #000000;
+$common-warning-color: #e82222;
+
+$secondary-background-color: #ffffff;
+$secondary-text-color: #000000;
+$secondary-border-color: #000000;
+
+// Mixin that enables css variables in Light Mode
+@mixin enable-light-mode() {
+  --primary-background-color: #{$primary-background-color};
+  --primary-text-color: #{$primary-text-color};
+  --primary-border-color: #{$primary-border-color};
+  --common-warning-color: #{$common-warning-color};
+
+  --secondary-background-color: #{$secondary-background-color};
+  --secondary-text-color: #{$secondary-text-color};
+  --secondary-border-color: #{$secondary-border-color};
+}

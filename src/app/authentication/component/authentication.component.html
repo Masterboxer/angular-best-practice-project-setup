@@ -1,0 +1,27 @@
+<section class="h-full">
+  <div
+    class="h-full flex justify-center items-center bg-primary-background-color"
+  >
+    <form
+      class="flex flex-col h-2/3 justify-center gap-4 shadow-lg shadow-stone-400 rounded-md border bg-secondary-background-color"
+      [formGroup]="authenticationForm"
+    >
+      <img
+        src="/assets/logos/oasys-logo-pay.png"
+        alt="Oasys Logo"
+        class="max-w-40 max-h-40 self-center"
+      />
+      <app-common-input
+        type="text"
+        placeholder="Username"
+        formControlName="username"
+      ></app-common-input>
+      <app-common-input
+        type="password"
+        placeholder="Password"
+        formControlName="password"
+      ></app-common-input>
+      <app-common-button buttonText="Login"></app-common-button>
+    </form>
+  </div>
+</section>

@@ -1,0 +1,10 @@
+@use "./dark-theme-variables" as dark;
+@use "./light-theme-variables" as light;
+
+.dark-mode {
+  @include dark.enable-dark-mode();
+}
+
+.light-mode {
+  @include light.enable-light-mode();
+}
