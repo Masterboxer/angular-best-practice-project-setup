@@ -25,10 +25,10 @@ describe("AppComponent", () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have the 'oss-sass' title`, () => {
+  it(`should have the 'angular-best-practices' title`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual("oss-sass");
+    expect(app.title).toEqual("angular-best-practices");
   });
 
   it("should call themeService.initiateTheme on ngOnInit", () => {

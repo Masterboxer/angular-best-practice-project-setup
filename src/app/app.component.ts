@@ -10,7 +10,7 @@ import { ThemeService } from "./core/theme/theme.service";
   styleUrl: "./app.component.scss"
 })
 export class AppComponent implements OnInit {
-  title = "oss-sass";
+  title = "angular-best-practices";
 
   constructor(private themeService: ThemeService) {}
 

@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "oss-sass": {
+    "angular-best-practices": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/oss-sass",
+            "outputPath": "dist/angular-best-practices",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": ["zone.js"],
@@ -64,10 +64,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "oss-sass:build:production"
+              "buildTarget": "angular-best-practices:build:production"
             },
             "development": {
-              "buildTarget": "oss-sass:build:development"
+              "buildTarget": "angular-best-practices:build:development"
             }
           },
           "defaultConfiguration": "development"
